@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab 1</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class='content'>
+    <table>
+        <tr>
+            <td><br><img id="logo" src="images/logo.png" width="250" alt="logo"></td>
+            <td>
+                <table>
+                    <tr>
+                        <td><h2 class="header">Variant 34200</h2></td>
+                        <td><h2 class="header">Artemenko Svetlana</h2></td>
+                        <td><h2 class="header">P3233</h2></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form class='form' action="input.php" method="POST">
+                    <table>
+                        <tr>
+                            <td class="leftInput">
+                                <label>
+                                    <input type="text" class="x-field" name="x" placeholder="number (-5 ; 5)">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="leftInput">
+                                <label>
+                                    <input type="text" class="y-field" name="y" placeholder="number (-5 ; 3)">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="leftInput">
+                            <td id="generateRadioBtn">
+                                <img src="images/icon-r.png" alt="r">
+                                <script>
+                                    for (let i = 1; i < 3.5; i += 0.5) {
+                                        let textNode = document.createTextNode(String(i));
+
+                                        let btn = document.createElement("input");
+                                        btn.type = "radio";
+                                        btn.checked = true;
+                                        btn.className = "r-field"
+                                        btn.value = String(i);
+                                        btn.name = "r";
+                                        btn.style.width = "30px";
+                                        btn.style.height = "30px";
+                                        btn.style.borderRadius = "100%";
+
+                                        document.getElementById("g" +
+                                            "enerateRadioBtn").appendChild(btn);
+                                        btn.after(textNode);
+                                    }
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="leftInput">
+                                <button class ="submit"><h2>submit</h2></button>
+                            </td>
+
+                        </tr>
+                    </table>
+                </form>
+            </td>
+            <td height="650">
+                <table>
+                    <thead>
+                    <tr>
+                        <th><h2>X</h2></th>
+                        <th><h2>Y</h2></th>
+                        <th><h2>R</h2></th>
+                        <th><h2>Result</h2></th>
+                        <th><h2>Date</h2></th>
+                        <th><h2>Time</h2></th>
+                    </tr>
+                    <tr>
+                        <th colspan="6">
+                            <hr>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody id="table-place">
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><h2>2022</h2></td>
+            <td><h2>vsem spasibo vsem poka</h2></td>
+        </tr>
+
+    </table>
+</div>
+<script src="script.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
+</body>
+</html>
